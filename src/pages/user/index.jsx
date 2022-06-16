@@ -90,7 +90,7 @@ export default function User({
             </Button>
           </div>
           <FlexSurface flexDirection="column" alignItems="strech" gap="1rem">
-            {currentUser.techs ? (
+            {currentUser.techs.length > 0 ? (
               currentUser.techs?.map((tech) => (
                 <Card
                   key={tech.id}
