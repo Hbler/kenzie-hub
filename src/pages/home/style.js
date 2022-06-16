@@ -10,4 +10,12 @@ export const HomeMain = styled.main`
   align-items: stretch;
   flex-direction: column;
   justify-content: center;
+
+  .btn {
+    width: 100%;
+
+    display: flex;
+    align-items: stretch;
+    flex-direction: column;
+  }
 `;

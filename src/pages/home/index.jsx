@@ -15,36 +15,42 @@ export default function Home({ authenticated }) {
 
         {authenticated ? (
           <SlideDown>
-            <Button
-              btnColor="negative"
-              onClick={() => {
-                history.push("/user");
-              }}
-            >
-              Perfil
-            </Button>
+            <div className="btn">
+              <Button
+                btnColor="negative"
+                onClick={() => {
+                  history.push("/user");
+                }}
+              >
+                Perfil
+              </Button>
+            </div>
           </SlideDown>
         ) : (
           <SlideDown>
-            <Button
-              btnColor="light-gray"
-              onClick={() => {
-                history.push("/login");
-              }}
-            >
-              Fazer Login
-            </Button>
+            <div className="btn">
+              <Button
+                btnColor="light-gray"
+                onClick={() => {
+                  history.push("/login");
+                }}
+              >
+                Fazer Login
+              </Button>
+            </div>
           </SlideDown>
         )}
         <SlideUp>
-          <Button
-            btnColor="gray"
-            onClick={() => {
-              history.push("/registry");
-            }}
-          >
-            Ver Usuários Cadastrados
-          </Button>
+          <div className="btn">
+            <Button
+              btnColor="gray"
+              onClick={() => {
+                history.push("/registry");
+              }}
+            >
+              Ver Usuários Cadastrados
+            </Button>
+          </div>
         </SlideUp>
       </HomeMain>
     </div>
