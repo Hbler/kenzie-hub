@@ -140,9 +140,8 @@ export const EditTech = ({ setCurrentUser, setEditTech, clickedTech }) => {
     clearFields: true,
     formFields: [title, status],
     submitCallback: (formData) => {
-      console.log(formData);
       api
-        .post(`/users/techs/${clickedTech.id}`, formData, {
+        .put(`/users/techs/${clickedTech.id}`, formData, {
           headers: {
             Authorization: `Bearer ${localStorage.getItem("@kenzieHub.token")}`,
           },
